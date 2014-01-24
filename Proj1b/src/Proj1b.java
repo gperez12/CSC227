@@ -4,11 +4,19 @@ public class Proj1b {
 
 	public static void main(String args[])
 	{
+		final double DAYS_IN_YEAR = 365;
+		
 		int age,
-			outcome_Age = 0; 
+			outcome_Age = 0,
+			age_delta; 
+		
 		double amount,
-			   percentage,
-			   total = 0;
+			   apy,
+			   total = 0,
+			   temp,
+			   exponent,
+			   apr,
+			   apr_percentage;
 		
 		Scanner keyboard; 
 		
@@ -28,15 +36,25 @@ public class Proj1b {
 		amount = keyboard.nextDouble();
 		
 		System.out.print("Enter the investment's APY as a percent (ex: 3.5):");
-		percentage = keyboard.nextDouble();
+		apy = keyboard.nextDouble();
 		
-		System.out.print("\nBe aware: Your investment's APR is just " + percentage + "\n");
+		temp = (1+(apy/100));
+		exponent = (1/DAYS_IN_YEAR);
+		
+		apr = (DAYS_IN_YEAR * (Math.pow(temp,exponent)-1));
+		
+		apr_percentage = (apr*100);
+		
+		age_delta = 70-age;
+		
+		System.out.print("\nBe aware: Your investment's APR is just " + apr_percentage + "%.\n");
 
 		System.out.print("\nAt age " + age + ", an investment of $"
 						+ amount + ",\ncompounded 365.0 times per"
-						+ " year using an APY of " + percentage + 
+						+ " year using an APY of " + apy + 
 						", \nwill be worth " + total + " when you turn "
 						+ outcome_Age + " years old." );
+		
 		
 		
 		
