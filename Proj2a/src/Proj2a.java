@@ -23,7 +23,7 @@ public class Proj2a {
 		System.out.println("\nThe sequence of hailstones formed from " + startingValue 
 						  + " is :\n");
 		
-		System.out.print(startingValue + "\t");
+		System.out.printf("%8d",startingValue);
 		
 		while (startingValue >1)
 		{	
@@ -48,7 +48,7 @@ public class Proj2a {
 				max = temp;
 			}
 			
-			System.out.printf(startingValue + "\t");
+			System.out.printf("%8d", startingValue);
 		}
 		
 		System.out.print("\n");
