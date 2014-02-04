@@ -14,8 +14,11 @@ public class Proj2a {
 		
 		keyboard = new Scanner (System.in);
 		
-		System.out.print("Enter the starting value for the hailstone sequence:");
-		startingValue = keyboard.nextInt();
+		do{
+			System.out.print("Enter the starting value for the hailstone sequence:");
+			startingValue = keyboard.nextInt();
+			
+		}while(startingValue < 0);
 		
 		System.out.println("\nThe sequence of hailstones formed from " + startingValue 
 						  + " is :\n");
@@ -25,12 +28,14 @@ public class Proj2a {
 		while (startingValue >1)
 		{	
 			temp = startingValue;
+			
 			if (startingValue % 2 == 0){
 				startingValue = startingValue/2;
 			}
-			else{
-				startingValue = (startingValue*3)+1;
-			}
+				else{
+					startingValue = (startingValue*3)+1;
+				}
+			
 			count ++;
 			total ++;
 			
@@ -42,8 +47,10 @@ public class Proj2a {
 			if(temp > max){
 				max = temp;
 			}
-			System.out.print(startingValue + "\t");
+			
+			System.out.printf(startingValue + "\t");
 		}
+		
 		System.out.print("\n");
 		
 		System.out.println("\nThe hailstone sequence contains " + total +
