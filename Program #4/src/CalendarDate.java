@@ -8,13 +8,13 @@ public class CalendarDate {
 	public CalendarDate (int year, int month, int day)
 	{
 		
-		if (month <= 0)
+		if (month < 0 || month == 0)
 			month = 1; 
 		
 		if (month > 12)
 			month = 12;
 		
-		if (day <= 0)
+		if (day < 0 || day == 0)
 			day = 1; 
 		
 		if (month == 2 && day == 29)
@@ -34,6 +34,14 @@ public class CalendarDate {
 		
 		if (year<0)
 			year = Math.abs(year);
+		
+		if (month == 4 || month == 6 || month == 9 || month == 11)
+		{
+			if(day == 31)
+			{
+				day = 30; 
+			}
+		}
 		
 		this.year = year;
 		this.month = month; 

@@ -4,11 +4,11 @@ public class Prog4 {
 	public static void main (String [] args)
 	{
 		CalendarDate tomorrow, yesterday;
-		CalendarDate date = new CalendarDate(1992,8,8);
+		CalendarDate date = new CalendarDate(1992,10,31);
 		boolean result;
 		
 		System.out.println("Creating new CalendarData object with 1992, 8, 8");
-		CalendarDate testing = new CalendarDate (1993, 2, 29);
+		CalendarDate testing = new CalendarDate (0,0, 0);
 		System.out.println(); 
 		
 		System.out.println("Calling getYear()...should return 1992" + 
