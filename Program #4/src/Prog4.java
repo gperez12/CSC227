@@ -8,11 +8,11 @@
  |	  Due Date:	February 25, 2014, by 9:00 p.m. MST
  |
  |     Description:	This program will create a CalendarDate object. Following
- |					this creation it will go through a series of method calls. Once 
- |					all the calls have been made on this one object we will call
- |					setDate to change the values within the object. This will happen
- |					for a total of five time with different values that will try to 
- |					break the CalendarDate class. 
+ |			this creation it will go through a series of method calls. Once 
+ |			all the calls have been made on this one object we will call
+ |			setDate to change the values within the object. This will happen
+ |			for a total of five time with different values that will try to 
+ |			break the CalendarDate class. 
  |					
  |    Deficiencies:	None known; this program meets specifications.
 *==========================================================================================*/
@@ -26,7 +26,7 @@ public class Prog4 {
 		
 		/* instantiating new CalendarDate object with 
 		 * int year = 1992, int month = 8, and int day = 8.
-         */
+                 */
 		
 		System.out.println("Creating new CalendarData object with 1992, 8, 8");
 		CalendarDate testing = new CalendarDate (1992,8, 8);
@@ -284,5 +284,5 @@ public class Prog4 {
 		
 		
 	
-	}
-}
+	} //main
+} //Class Proj4
