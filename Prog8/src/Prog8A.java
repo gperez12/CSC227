@@ -125,11 +125,8 @@ public class Prog8A {
 					System.out.println(polynomial2.equals(polynomial1));
 					
 					
-					
-					
-					
 		
 		
-	}
+	} //end of main
 	
-}
+} //end of Prog8A

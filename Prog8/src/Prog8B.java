@@ -127,5 +127,5 @@
 			System.out.println(polynomial2.equals(polynomial1));
 			
 		}	// end of main
-	} //end of Prog7
+	} //end of Prog8B
 
