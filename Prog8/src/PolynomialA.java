@@ -1,14 +1,14 @@
-import java.util.*;
+import java.util.ArrayList;
 
 /*+----------------------------------------------------------------------
  ||
- ||  Class Polynomial.java
+ ||  Class PolynomialA.java
  ||
  ||         Author:  Gabriel Perez
  ||
- ||        Purpose:  This class creates polynomial object and implements
+ ||        Purpose:  This class creates PolynomialA object and implements
  ||					 Quality class. This class allows users to access 
- ||					 polynomial objects and perform operations such as 
+ ||					 PolynomialA objects and perform operations such as 
  ||					 evaluating, adding, holding, tostring and much more. 
  ||
  ||  Inherits From:  None.
@@ -21,14 +21,14 @@ import java.util.*;
  ||
  |+-----------------------------------------------------------------------
  ||
- ||   Constructors:  Polynomial()
+ ||   Constructors:  PolynomialA()
  ||
  ||  Class Methods:  None.
  ||
- ||  Inst. Methods:  Polynomial add(Polynomial p)
- ||					 Polynomial replicate()
- ||					 Polynomial negate()
- ||					 boolean    equals(Polynomial p)
+ ||  Inst. Methods:  PolynomialA add(PolynomialA p)
+ ||					 PolynomialA replicate()
+ ||					 PolynomialA negate()
+ ||					 boolean    equals(PolynomialA p)
  ||				     boolean    isEmpty()
  ||					 boolean    isFull()
  ||					 double     evaluate(double x)
@@ -39,46 +39,46 @@ import java.util.*;
  ||                  int        holding()
  ||
  ++-----------------------------------------------------------------------*/
-class Polynomial implements Quantity {
+class PolynomialA implements Quantity {
 	
 	private ArrayList <Integer> list ; //variable for the ArrayList
 	 /*---------------------------------------------------------------------------
-    |  Method Polynomial ()
+    |  Method PolynomialA ()
     |
-    |  Purpose:  This constructor will create a Polynomial object. In the object 
+    |  Purpose:  This constructor will create a PolynomialA object. In the object 
     |			 it creates an empty ArrayList.
     |
     |  Pre-condition:  None.
     |
-    |  Post-condition: A reference to a Polynomial object will be created with an
+    |  Post-condition: A reference to a PolynomialA object will be created with an
     |				   empty ArrayList.
     |
     |  Parameters: None.
     |
-    |  Returns:  A reference to the new Polynomial object. 
+    |  Returns:  A reference to the new PolynomialA object. 
     *----------------------------------------------------------------------------*/
-	public Polynomial()
+	public PolynomialA()
 	{
 		list = new ArrayList <Integer> (); //creating an empty ArrayList
 		
 	}
 	 /*---------------------------------------------------------------------------
-    |  Method add(Polynomial p)
+    |  Method add(PolynomialA p)
     |
-    |  Purpose:  This method will add the Polynomial object p to the current
-    |			 Polynomial object. Once this addition is completed the method 
-    |			 will return a new Polynomial object with the corrected value. 
+    |  Purpose:  This method will add the PolynomialA object p to the current
+    |			 PolynomialA object. Once this addition is completed the method 
+    |			 will return a new PolynomialA object with the corrected value. 
     |
     |  Pre-condition: None.
     |
-    |  Post-condition: A reference to a Polynomial object will be created with an
-    |				   containing the addition between the two other Polynomial objects
+    |  Post-condition: A reference to a PolynomialA object will be created with an
+    |				   containing the addition between the two other PolynomialA objects
     |
-    |  Parameters: Polynomial p -- a Polynomial object containing terms. 
+    |  Parameters: PolynomialA p -- a PolynomialA object containing terms. 
     |
-    |  Returns:  A reference to the new Polynomial object. 
+    |  Returns:  A reference to the new PolynomialA object. 
     *----------------------------------------------------------------------------*/
-	public Polynomial add (Polynomial p)
+	public PolynomialA add (PolynomialA p)
 	{
 		int value =0;  //variable to hold the sum
 		
@@ -86,7 +86,7 @@ class Polynomial implements Quantity {
 		{
 			value = list.get(i) + list.get(i); //adding the values within the list
 		}
-		return p; //return the polynomial
+		return p; //return the PolynomialA
 		
 	}
 	 /*---------------------------------------------------------------------------
@@ -94,11 +94,11 @@ class Polynomial implements Quantity {
     |
     |  Purpose:  This method will take two int inputs (c) coefficient and (e) exponent.
     |			 With this information the method will add this term to the current 
-    |			 Polynomial object.  
+    |			 PolynomialA object.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: A term will be added to the current Polynomial object. 
+    |  Post-condition: A term will be added to the current PolynomialA object. 
     |
     |  Parameters: int c -- The coefficient of the term 
     |			   int e -- The exponent of the term 
@@ -119,42 +119,42 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method replicate ()
     |
-    |  Purpose:  This method will create a new polynomial object with a current of 
-    |			 the current Polynomial object. 
+    |  Purpose:  This method will create a new PolynomialA object with a current of 
+    |			 the current PolynomialA object. 
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Creates a new reference to a Polynomial object containing the 
-	|				   same polynomial as the current
+    |  Post-condition: Creates a new reference to a PolynomialA object containing the 
+	|				   same PolynomialA as the current
     |
     |  Parameters: None.
     |
-    |  Returns:  A reference to the new Polynomial object. 
+    |  Returns:  A reference to the new PolynomialA object. 
     *----------------------------------------------------------------------------*/
-	public Polynomial replicate ()
+	public PolynomialA replicate ()
 	{
-		Polynomial temp = new Polynomial();	//create a Polynomial object
-		return temp;	//return Polynomial object
+		PolynomialA temp = new PolynomialA();	//create a PolynomialA object
+		return temp;	//return PolynomialA object
 		
 	}
 	 /*---------------------------------------------------------------------------
-    |  Method equals (Polynomial p)
+    |  Method equals (PolynomialA p)
     |
-    |  Purpose:  This method will check to see if the current Polynomial object and 
-    |			 Polynomial p has the same content. If they contain the same content 
+    |  Purpose:  This method will check to see if the current PolynomialA object and 
+    |			 PolynomialA p has the same content. If they contain the same content 
     |            this method will produce a true. 
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Returns true or false based on the content of the two Polynomial
+    |  Post-condition: Returns true or false based on the content of the two PolynomialA
     |				   objects.
     |
-    |  Parameters: Polynomial p -- A reference to a Polynomial object that a user would
-    |							   like to compare to the current Polynomial object. 
+    |  Parameters: PolynomialA p -- A reference to a PolynomialA object that a user would
+    |							   like to compare to the current PolynomialA object. 
     |
     |  Returns:  True or False based on if the contents of both objects are equal.
     *----------------------------------------------------------------------------*/
-	public boolean equals (Polynomial p)
+	public boolean equals (PolynomialA p)
 	{
 		if(p.holding() == this.holding())	//check to see if the number of terms are equal
 		{
@@ -166,14 +166,14 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method evaluate (double x)
     |
-    |  Purpose:  This method will evaluate the current Polynomial object with value
+    |  Purpose:  This method will evaluate the current PolynomialA object with value
     |            of double x.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
     |  Post-condition: Returns the result of the evaluation. 
     |
-    |  Parameters: double x -- The value the user would like to evaluate the Polynomial
+    |  Parameters: double x -- The value the user would like to evaluate the PolynomialA
     |						   by. 
     |
     |  Returns:  Returns the result of the evaluation. 
@@ -196,7 +196,7 @@ class Polynomial implements Quantity {
     |
     |  Purpose:  This method will return the Coefficient based on the given exponent. 
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
     |  Post-condition: Returns the Coefficient that goes along with the given exponent.
     |
@@ -223,11 +223,11 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method isEmpty ()
     |
-    |  Purpose:  This method will check to see if the Polynomial object is termless.
+    |  Purpose:  This method will check to see if the PolynomialA object is termless.
     |			 If the object is termless then the method will return true. If the 
     |			 object contains terms than it will return false.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
     |  Post-condition: Returns true or false based on whether the object is termless 
     |				   or not. 
@@ -248,11 +248,11 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method isFull ()
     |
-    |  Purpose:  This method will check to see if the Polynomial object is full of terms.
+    |  Purpose:  This method will check to see if the PolynomialA object is full of terms.
     |			 If the object is full then the method will return true. If the 
     |			 object contain space than it will return false.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
     |  Post-condition: Returns true or false based on whether the object is full 
     |				   or not. 
@@ -269,15 +269,15 @@ class Polynomial implements Quantity {
     |  Method holding ()
     |
     |  Purpose:  This method will count the number of non-zero terms within the
-    |			 Polynomial object. 
+    |			 PolynomialA object. 
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Returns the count of non-zero terms within the Polynomial object. 
+    |  Post-condition: Returns the count of non-zero terms within the PolynomialA object. 
     |
     |  Parameters: None.
     |
-    |  Returns:  Returns the count of non-zero terms within the Polynomial object.
+    |  Returns:  Returns the count of non-zero terms within the PolynomialA object.
     *----------------------------------------------------------------------------*/
 	public int holding ()
 	{
@@ -298,25 +298,25 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method negate ()
     |
-    |  Purpose:  This method will create a new reference to a Polynomial object
-    |			 containing the same values as the current Polynomial but will flip 
+    |  Purpose:  This method will create a new reference to a PolynomialA object
+    |			 containing the same values as the current PolynomialA but will flip 
     |			 the signs of the Coefficients.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Returns a new reference of a Polynomial object with the same 
-    |                  content as the current Polynomial but will flip the Coefficient 
+    |  Post-condition: Returns a new reference of a PolynomialA object with the same 
+    |                  content as the current PolynomialA but will flip the Coefficient 
     | 				   signs.  
     |
     |  Parameters: None.
     |
-    |  Returns:  Returns a new reference of a Polynomial object with the same 
-    |            content as the current Polynomial but will flip the Coefficient 
+    |  Returns:  Returns a new reference of a PolynomialA object with the same 
+    |            content as the current PolynomialA but will flip the Coefficient 
     | 		     signs.  
     *----------------------------------------------------------------------------*/
-	public Polynomial negate ()
+	public PolynomialA negate ()
 	{
-		Polynomial newpoly = new Polynomial(); //create Polynomial object
+		PolynomialA newpoly = new PolynomialA(); //create PolynomialA object
 		int value =0; //Variable to hold calculations
 		for(int i =0; i<list.size(); i++) //for loop to go through list
 		{
@@ -343,11 +343,11 @@ class Polynomial implements Quantity {
     |  Method scalarMultiply (int s)
     |
     |  Purpose:  This method will multiply each term's Coefficients in current
-    |			 Polynomial object. 
+    |			 PolynomialA object. 
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Updates the Polynomial object with updated Coefficients. 
+    |  Post-condition: Updates the PolynomialA object with updated Coefficients. 
     |
     |  Parameters: None.
     |
@@ -370,16 +370,16 @@ class Polynomial implements Quantity {
 	 /*---------------------------------------------------------------------------
     |  Method toString ()
     |
-    |  Purpose:  This method will create a string representation based on the polynomial
+    |  Purpose:  This method will create a string representation based on the PolynomialA
     |			 object.  
     |
-    |  Pre-condition:  A reference to a Polynomial object currently exists.
+    |  Pre-condition:  A reference to a PolynomialA object currently exists.
     |
-    |  Post-condition: Returns a string showing the polynomial representation.   
+    |  Post-condition: Returns a string showing the PolynomialA representation.   
     |
     |  Parameters: None.
     |
-    |  Returns:  Returns a string showing the polynomial representation.  
+    |  Returns:  Returns a string showing the PolynomialA representation.  
     *----------------------------------------------------------------------------*/
 	public String toString ()
 	{
