@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=Eclipse
+Comment=Develop applications in a variety of different programming languages
+Exec=/usr/bin/eclipse
+Icon=eclipse48.png
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true

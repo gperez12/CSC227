@@ -1,0 +1,6 @@
+1	Hearts
+2	Diamonds
+3	spades
+4	Clubs 
+13 	spades
+12  Gabe
